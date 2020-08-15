@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hand track</title>
+    <style>
+        video,
+        canvas {
+            margin: auto;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 100px;
+        }
+
+        .p5Canvas {
+            z-index: 10;
+            background-color:rgba(255,255,255,0);
+            transform: scaleX(1);
+        }
+    </style>
+</head>
+
+<body class="bx--body p20">
+    <video autoplay="autoplay" id="myvideo" style="display: none;"></video>
+    <canvas id="canvas"></canvas>
+    <canvas id="canvas2"></canvas>
+
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/planck-js/0.1.44/planck-with-testbed.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/handtrackjs@latest/dist/handtrack.min.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"
+integrity="sha512-WIklPM6qPCIp6d3fSSr90j+1unQHUOoWDS4sdTiR8gxUTnyZ8S2Mr8e10sKKJ/bhJgpAa/qG068RDkg6fIlNFA=="
+crossorigin="anonymous"></script>
+<script src="tracking.js"></script>
+<script src="hand.js"></script>
+
+</html>
