@@ -44,11 +44,11 @@ const context = canvas.getContext("2d");
 
 let isVideo = false;
 let model = null;
-let videoInterval = 10;
+let videoInterval = 0;
 
 const modelParams = {
     flipHorizontal: true, // flip e.g for video  
-    maxNumBoxes: 1, // maximum number of boxes to detect
+    maxNumBoxes: 2, // maximum number of boxes to detect
     iouThreshold: 0.5, // ioU threshold for non-max suppression
     scoreThreshold: 0.6, // confidence threshold for predictions.
 }
@@ -89,9 +89,7 @@ function toggleVideo() {
 function runDetection() {
     if (model) {
         model.detect(video).then(predictions => {
-            // console.log("Predictions: ", predictions);
-            // get the middle x value of the bounding box and map to paddle location
-            model.renderPredictions(predictions, canvas, context, video);
+            // model.renderPredictions(predictions, canvas, context, video);
             if (predictions[0]) {
                 let x = predictions[0].bbox[0];
                 let y = predictions[0].bbox[1];

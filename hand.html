@@ -19,11 +19,16 @@
             background-color:rgba(255,255,255,0);
             transform: scaleX(1);
         }
+
+        video {
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+        }
     </style>
 </head>
 
 <body class="bx--body p20">
-    <video class="videobox canvasbox" autoplay="autoplay" id="myvideo" style="display: none;"></video>
+    <video class="videobox canvasbox" autoplay="autoplay" id="myvideo"></video>
     <canvas id="canvas" class="border canvasbox"></canvas>
     <canvas id="canvas2"></canvas>
 
